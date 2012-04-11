@@ -1,0 +1,26 @@
+{
+	"name": "OmniTranslate",
+	"description": "Quick translate in omnibox",
+	"version": "1.0",
+	"background_page": "background.html",
+	"omnibox": {"keyword": "tr"},
+	"permissions": ["tabs", "http://*/*", "https://*/*"],
+	"minimum_chrome_version": "9",
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"lib/jquery-1.6.1.min.js",
+				"lib/ztoolkit.js"
+			]
+		}
+	],
+	"icons": {
+		"128": "img/128.png",
+		"48": "img/48.png",
+		"16": "img/16.png"
+	}
+}
